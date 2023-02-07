@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
+import ProductList from '../containers/ProductList';
 
 const Home = () => {
-    return (
-        <div>
-            <h1>
-                shopWeb
-            </h1>
-        </div>
-    );
+	return (
+		<>
+			<ProductList />
+		</>
+	);
 }
 
 export default Home;
