@@ -11,11 +11,15 @@ import CreateAccount from '../pages/CreateAccount';
 import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
 import NotFound from '../pages/NotFound';
+import AppContext from '../context/AppContext';
 import '../styles/global.css';
+import useInitialState from '../hooks/useInitialState';
 
 const App = () => {
+	const initialState = useInitialState();
 	return (
-		<BrowserRouter>
+		<AppContext.Provider value={initialState}>
+			<BrowserRouter>
 			<Layout>
 				<Switch>
 					<Route exact path="/" component={Home} />
@@ -31,6 +35,8 @@ const App = () => {
 				</Switch>
 			</Layout>
 		</BrowserRouter>
+		</AppContext.Provider>
+		
 	);
 }
 

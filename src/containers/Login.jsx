@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import '../styles/Login.scss';
 
 const Login = () => {
+    const form = useRef(null);
+
+    const handleSubmit = () => {
+        const formData = new formData(form.current);
+        const data = {
+            username: formData.get('email')
+        }
+    }
+
     return(
         <div className="login">
             <div className="form-container">
@@ -10,7 +19,7 @@ const Login = () => {
                     <h1 className="title">Create a new password</h1>
                     <p className="subtitle">Enter a new passwrd for yue account</p>
 
-                    <form action="/" className="form">
+                    <form action="/" className="form" ref={form}>
                         <label for="password" className="label">Password</label>
                             <input type="password" id="password" placeholder="*********" className="input input-password" />
 
