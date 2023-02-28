@@ -14,13 +14,11 @@ module.exports = {
 		extensions: ['.js', '.jsx'],
 		alias: {
 			'@components': path.resolve(__dirname, 'src/components/'),
-			'@containers': path.resolve(__dirname, 'src/containers/'),
-			'@pages': path.resolve(__dirname, 'src/pages/'),
-			'@routes': path.resolve(__dirname, 'src/routes/'),
+			'@containers': path.resolve(__dirname, 'src/containars/'),
 			'@styles': path.resolve(__dirname, 'src/styles/'),
 			'@icons': path.resolve(__dirname, 'src/assets/icons/'),
 			'@logos': path.resolve(__dirname, 'src/assets/logos/'),
-		}
+		},
 	},
 	module: {
 		rules: [
